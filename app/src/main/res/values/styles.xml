@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="BaseAppTheme" parent="BaseAppTheme.NoActionBar" />
+
+    <style name="BaseAppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item><!--状态栏颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+        <!--<item name="android:fitsSystemWindows">true</item>&lt;!&ndash;可能导致 toast内容位置改变，解决方案：使用全局context&ndash;&gt;-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ClubToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决Toolbar左侧空白部分-->
+    </style>
+
+
+</resources>

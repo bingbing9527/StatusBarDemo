@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.qbb.statusbardemo.MainActivity">
+
+    <!--解决4.4布局被覆盖问题，
+            设置fitsSystemWindows为true
+        这样的话需要在每个需要状态栏的情况下，都要设置
+            1、在style设置全局fitsSystemWindows为true，
+                1、而这可能导致Toast错位，使用全局context可解决错位问题
+                2、但在不需要状态栏时，依旧会显示出来，未解决，貌似设置为false无效
+            2、在同时需要标题栏时，可给标题栏设置fitsSystemWindows为true，内容布局include该标题栏，不需要标题栏时单独设置fitsSystemWindows
+            3、目前只想到了这两种方法，如有其它方案，欢迎Issues
+    -->
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="全屏"/>
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="修改状态栏颜色为红色"/>
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="修改状态栏颜色为黄色"/>
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="透明状态栏 + 图片显示"/>
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="透明状态栏 + 图片显示 + 滑动隐藏toolbar"/>
+
+</LinearLayout>
